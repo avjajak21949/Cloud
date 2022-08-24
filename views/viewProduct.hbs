@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>All product</title>
+</head>
+<body>
+    <style>
+        body {
+    width: 100%;
+    background: #f3fcf4;
+    margin: 0 auto;
+    color: #000000;
+    text-align: center;
+    font-family: roboto, sans-serif;
+    }
+    nav {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #0a2d4a;
+    color: #e2d7aa;
+}
+    </style>
+    <img src="../image/intro.png" width="100%" height="auto">
+   <nav>
+    <ul>
+        <li><a href="/view" class="btn btn-success">Home</a></li>
+        <li><a href="/new" class="btn btn-warning">Add new product</a></li>
+        <li> <a href="/asc" class="btn btn-primary">ASC sort</a></li>
+        <li> <a href="/desc" class="btn btn-secondary">DESC sort</a></li>
+        <li>  <div class="form-outline">
+    <form action="/search" method="post">  
+    <input type="text" name="txtSearch">
+    <input type="submit" value="Search" class="btn btn-info">
+    </form>
+    </div>
+    </li>
+    </ul>
+</nav>
+    <div class="container col-md-6 mt-5 text-center">
+    <h1 class="text text-primary">All product</h1>
+    <table class="table table-primary md-6">
+        <thead>
+            <tr>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each prod}}
+            <tr>
+                <td>{{name}}</td>
+                <td>${{price}}</td>
+                <td>
+                   <img src="{{picture}}" width="100" height="100">
+                </td>
+                <td>
+                    <a href="/edit?id={{_id}}" class="btn btn-warning">Edit</a>
+                    <a href="/delete?id={{_id}}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

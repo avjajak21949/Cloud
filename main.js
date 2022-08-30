@@ -94,6 +94,9 @@ app.get('/desc',async(req,res)=>{
 app.get('/new',(req,res)=>{
     res.render('newProduct')
 })
+app.get('/',(req,res)=>{
+    res.render('viewProduct')
+})
 // const showMenu=(toggleID,navbarID,bodyID)=>{
 //     const toggle=document.getElementById(toggleID),
 //     navbar= document.getElementById(navbarID),

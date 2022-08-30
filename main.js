@@ -9,8 +9,8 @@ var MongoClient = require("mongodb").MongoClient;
 app.set("view engine", "hbs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-var url='mongodb://localhost:27017'
-//var url='mongodb+srv://PhamQuangHuy:huy28072002@cluster0.ah2nbyz.mongodb.net/test'
+//var url='mongodb://localhost:27017'
+var url='mongodb+srv://PhamQuangHuy:huy28072002@cluster0.ah2nbyz.mongodb.net/test'
 app.use(express.static(__dirname + '/public'));
 
 

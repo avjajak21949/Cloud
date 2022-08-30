@@ -1,15 +1,20 @@
-const { ObjectID, ObjectId } = require('bson')
-var express=require('express')
-var app=express()
+var express = require("express");
+var hbs = require("hbs");
+const async = require("hbs/lib/async");
+const { ObjectId } = require("mongodb");
 
-var MongoClient=require('mongodb').MongoClient
+var app = express();
+
+var MongoClient = require("mongodb").MongoClient;
+app.set("view engine", "hbs");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 //var url='mongodb://localhost:27017'
 var url='mongodb+srv://PhamQuangHuy:huy28072002@cluster0.ah2nbyz.mongodb.net/test'
-
-app.set('view engine','hbs')
-app.use(express.urlencoded({extended:true}))
 app.use(express.static(__dirname + '/public'));
 
+
+/////////////////////////////
 app.get('/edit',async(req,res)=>{
     let id = req.query.id;         
     let objectId = ObjectId(id);

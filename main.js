@@ -10,7 +10,7 @@ app.set("view engine", "hbs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 //var url='mongodb://localhost:27017'
-var url='mongodb+srv://PQHuy2002:huy28072002@cluster0.ve0z429.mongodb.net/test'
+var url='mongodb+srv://anderson210402:anderson210402@asm2.jioaljn.mongodb.net/test'
 app.use(express.static(__dirname + '/public'));
 
 

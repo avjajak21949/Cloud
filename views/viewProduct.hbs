@@ -11,9 +11,9 @@
     <style>
         body {
     width: 100%;
-    background: #f3fcf4;
+    background: grey;
     margin: 0 auto;
-    color: #000000;
+    color: deepskyblue;
     text-align: center;
     font-family: roboto, sans-serif;
     }
@@ -32,15 +32,15 @@ nav a{
     text-decoration: none;
 }
 nav a:hover {
-    background-color: #0a2d4a;
-    color: #e2d7aa;
+    background-color: black;
+    color: white;
 }
     </style>
     <img src="../image/intro.png" width="100%" height="auto">
    <nav>
     <ul>
         <li><a href="/view" class="btn btn-success">Home</a></li>
-        <li><a href="/new" class="btn btn-warning">Add new product</a></li>
+        <li><a href="/new" class="btn btn-warning">Add product</a></li>
         <li> <a href="/asc" class="btn btn-primary">ASC sort</a></li>
         <li> <a href="/desc" class="btn btn-secondary">DESC sort</a></li>
         <li>  <div class="form-outline">
@@ -69,7 +69,7 @@ nav a:hover {
                 <td>{{name}}</td>
                 <td>${{price}}</td>
                 <td>
-                   <img src="{{picture}}" width="100" height="100">
+                   <img src="{{picture}}" width="50" height="50">
                 </td>
                 <td>
                     <a href="/edit?id={{_id}}" class="btn btn-warning">Edit</a>
